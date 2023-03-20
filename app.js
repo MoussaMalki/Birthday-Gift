@@ -50,7 +50,7 @@ function balloonsAndFireWorks() {
   }, 9000);
 }
 function finalMessage() {
-  alert(`happy birthday aiyana, ur my favorite cat ^w^`);
+  alert(`happy birthday Sana 3>`);
 }
 
 function random(num) {

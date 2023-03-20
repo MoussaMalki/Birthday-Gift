@@ -1,172 +1,180 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Lobster', cursive;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lobster", cursive;
 }
 #Home {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 #birthdayBox {
-    color: #E0144C;
-    font-size: 6rem;
-    cursor: pointer;
+  color: #e0144c;
+  font-size: 6rem;
+  cursor: pointer;
 }
-h1{
-    position: absolute;
-    text-align: center;
-    font-size: 4rem;
-    z-index: 999;
-   display: none;
+h1 {
+  position: absolute;
+  text-align: center;
+  font-size: 4rem;
+  z-index: 9;
+  display: none;
 }
 /* fireworks */
 .firework {
-	position: absolute;
+  position: absolute;
 }
 .explosion {
-	position: absolute;
-	left: -2px;
-	bottom: 0;
-	width: 4px;
-	height: 80px;
-	transform-origin: 50% 100%;
-	/* background-color: rgba(0,0,0,.2); */
-	overflow: hidden;
+  position: absolute;
+  left: -2px;
+  bottom: 0;
+  width: 4px;
+  height: 80px;
+  transform-origin: 50% 100%;
+  /* background-color: rgba(0,0,0,.2); */
+  overflow: hidden;
 }
 .explosion:nth-child(1) {
-	transform: rotate(0deg) translateY(-15px);
+  transform: rotate(0deg) translateY(-15px);
 }
 .explosion:nth-child(2) {
-	transform: rotate(30deg) translateY(-15px);
+  transform: rotate(30deg) translateY(-15px);
 }
 .explosion:nth-child(3) {
-	transform: rotate(60deg) translateY(-15px);
+  transform: rotate(60deg) translateY(-15px);
 }
 .explosion:nth-child(4) {
-	transform: rotate(90deg) translateY(-15px);
+  transform: rotate(90deg) translateY(-15px);
 }
 .explosion:nth-child(5) {
-	transform: rotate(120deg) translateY(-15px);
+  transform: rotate(120deg) translateY(-15px);
 }
 .explosion:nth-child(6) {
-	transform: rotate(150deg) translateY(-15px);
+  transform: rotate(150deg) translateY(-15px);
 }
 .explosion:nth-child(7) {
-	transform: rotate(180deg) translateY(-15px);
+  transform: rotate(180deg) translateY(-15px);
 }
 .explosion:nth-child(8) {
-	transform: rotate(210deg) translateY(-15px);
+  transform: rotate(210deg) translateY(-15px);
 }
 .explosion:nth-child(9) {
-	transform: rotate(240deg) translateY(-15px);
+  transform: rotate(240deg) translateY(-15px);
 }
 .explosion:nth-child(10) {
-	transform: rotate(270deg) translateY(-15px);
+  transform: rotate(270deg) translateY(-15px);
 }
 .explosion:nth-child(11) {
-	transform: rotate(300deg) translateY(-15px);
+  transform: rotate(300deg) translateY(-15px);
 }
 .explosion:nth-child(12) {
-	transform: rotate(330deg) translateY(-15px);
+  transform: rotate(330deg) translateY(-15px);
 }
 
 .explosion::before {
-	content: '';
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 100%;
-	height: 40px;
-	background-color: #f5cf52;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 40px;
+  background-color: #f5cf52;
 }
 @keyframes explosion {
-	0% {
-		top: 100%;
-	}
-	33%, 100% {
-		top: -50%;
-	}
+  0% {
+    top: 100%;
+  }
+  33%,
+  100% {
+    top: -50%;
+  }
 }
 
 #firework1 {
-	left: 50%;
-	top: 50%;
-	transform: scale(1);
+  left: 50%;
+  top: 50%;
+  transform: scale(1);
 }
 #firework1 .explosion::before {
-	animation: explosion 2s ease-in-out infinite;
+  animation: explosion 2s ease-in-out infinite;
 }
 
 #firework2 {
-	left: 40%;
-	top: 45%;
-	transform: scale(.7);
+  left: 40%;
+  top: 45%;
+  transform: scale(0.7);
 }
 #firework2 .explosion::before {
-	animation: explosion 2s .6s ease-in-out infinite;
+  animation: explosion 2s 0.6s ease-in-out infinite;
 }
 
 #firework3 {
-	left: 60%;
-	top: 65%;
-	transform: scale(.4);
+  left: 60%;
+  top: 65%;
+  transform: scale(0.4);
 }
 #firework3 .explosion::before {
-	animation: explosion 2s .4s ease-in-out infinite;
+  animation: explosion 2s 0.4s ease-in-out infinite;
 }
 
 #balloon-container {
-    height: 100vh;
-    padding: 1em;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
+  height: 100vh;
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+  z-index: 10;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #fdfd96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.balloon:after {
+  content: "▲";
+  text-align: center;
+  display: block;
+  position: absolute;
+  color: inherit;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
   }
-  
-  .balloon {
-    height: 125px;
-    width: 105px;
-    border-radius: 75% 75% 70% 70%;
-    position: relative;
+  to {
+    transform: translateY(-300vh);
+    opacity: 0;
   }
-  
-  .balloon:before {
-    content: "";
-    height: 75px;
-    width: 1px;
-    padding: 1px;
-    background-color: #FDFD96;
-    display: block;
-    position: absolute;
-    top: 125px;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-  
-  .balloon:after {
-      content: "▲";
-      text-align: center;
-      display: block;
-      position: absolute;
-      color: inherit;
-      top: 120px;
-      left: 0;
-      right: 0;
-      margin: auto;
-  }
-  
-  @keyframes float {
-    from {transform: translateY(100vh);
-    opacity: 1;}
-    to {transform: translateY(-300vh);
-    opacity: 0;}
-  }
+}
