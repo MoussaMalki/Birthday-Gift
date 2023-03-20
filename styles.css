@@ -24,6 +24,14 @@ h1 {
   font-size: 4rem;
   z-index: 9;
   display: none;
+  color: #e0144c;
+}
+#picOfHer {
+  width: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 /* fireworks */
 .firework {
