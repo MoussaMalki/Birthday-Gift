@@ -50,7 +50,7 @@ function balloonsAndFireWorks() {
   }, 9000);
 }
 function finalMessage() {
-  alert(`happy birthday Mariem, one of the best teachers even 3>`);
+  alert(`happy birthday Mariem, one of the best teachers ever 3>`);
 }
 
 function random(num) {
