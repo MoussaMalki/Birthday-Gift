@@ -6,6 +6,7 @@
   margin: 0;
   font-family: "Lobster", cursive;
 }
+
 #Home {
   display: flex;
   justify-content: center;
@@ -13,30 +14,39 @@
   height: 100vh;
   overflow: hidden;
 }
+
 #birthdayBox {
   color: #e0144c;
   font-size: 6rem;
   cursor: pointer;
 }
+
 h1 {
   position: absolute;
   text-align: center;
-  font-size: 4rem;
+  font-size: clamp(2.3rem, 10vw, 4rem);
   z-index: 9;
   display: none;
   color: #e0144c;
-}
-#picOfHer {
-  width: 8rem;
-  position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+#picOfHer {
+  height: 8rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* fireworks */
 .firework {
   position: absolute;
 }
+
 .explosion {
   position: absolute;
   left: -2px;
@@ -47,39 +57,51 @@ h1 {
   /* background-color: rgba(0,0,0,.2); */
   overflow: hidden;
 }
+
 .explosion:nth-child(1) {
   transform: rotate(0deg) translateY(-15px);
 }
+
 .explosion:nth-child(2) {
   transform: rotate(30deg) translateY(-15px);
 }
+
 .explosion:nth-child(3) {
   transform: rotate(60deg) translateY(-15px);
 }
+
 .explosion:nth-child(4) {
   transform: rotate(90deg) translateY(-15px);
 }
+
 .explosion:nth-child(5) {
   transform: rotate(120deg) translateY(-15px);
 }
+
 .explosion:nth-child(6) {
   transform: rotate(150deg) translateY(-15px);
 }
+
 .explosion:nth-child(7) {
   transform: rotate(180deg) translateY(-15px);
 }
+
 .explosion:nth-child(8) {
   transform: rotate(210deg) translateY(-15px);
 }
+
 .explosion:nth-child(9) {
   transform: rotate(240deg) translateY(-15px);
 }
+
 .explosion:nth-child(10) {
   transform: rotate(270deg) translateY(-15px);
 }
+
 .explosion:nth-child(11) {
   transform: rotate(300deg) translateY(-15px);
 }
+
 .explosion:nth-child(12) {
   transform: rotate(330deg) translateY(-15px);
 }
@@ -93,10 +115,12 @@ h1 {
   height: 40px;
   background-color: #f5cf52;
 }
+
 @keyframes explosion {
   0% {
     top: 100%;
   }
+
   33%,
   100% {
     top: -50%;
@@ -108,6 +132,7 @@ h1 {
   top: 50%;
   transform: scale(1);
 }
+
 #firework1 .explosion::before {
   animation: explosion 2s ease-in-out infinite;
 }
@@ -117,6 +142,7 @@ h1 {
   top: 45%;
   transform: scale(0.7);
 }
+
 #firework2 .explosion::before {
   animation: explosion 2s 0.6s ease-in-out infinite;
 }
@@ -126,6 +152,7 @@ h1 {
   top: 65%;
   transform: scale(0.4);
 }
+
 #firework3 .explosion::before {
   animation: explosion 2s 0.4s ease-in-out infinite;
 }
@@ -181,6 +208,7 @@ h1 {
     transform: translateY(100vh);
     opacity: 1;
   }
+
   to {
     transform: translateY(-300vh);
     opacity: 0;
